@@ -92,9 +92,9 @@ def create_customer_from_patient(doc):
                         "doctype": "Customer",
                         "customer_name": doc.patient_name,
                         "patient_record": doc.name,
-                        "customer_type": 'Individual',
-                        "customer_group": _('Individual'),
-                        "territory": _('All Territories')
+                        "customer_type": 'Individuel',
+                        "customer_group": _('Individuel'),
+                        "territory": _('Tous les Territoires')
                         }).insert(ignore_permissions=True)
 
                 frappe.db.set_value("Patient Record", doc.name, "Customer", customer.name)
